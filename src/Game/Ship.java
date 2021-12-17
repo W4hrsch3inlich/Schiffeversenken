@@ -35,7 +35,8 @@ public class Ship {
 		
 		for(int[] entry: this.coord) {
 			if (entry[0] == x && entry[1] == y) {
-				if (entry[2] != 0) {
+				if (entry[2] == 0) {
+					entry[2] = 1;
 					status = 1;	/* first hit */
 				} else {
 					status = 2;	/* hit again */
